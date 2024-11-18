@@ -11,9 +11,6 @@ importers:
       '@astrojs/check':
         specifier: ^0.9.4
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.6.3)
-      astro:
-        specifier: 5.0.0-beta.5
-        version: 5.0.0-beta.5(@types/node@22.8.2)(rollup@4.24.2)(typescript@5.6.3)
       github-slugger:
         specifier: ^2.0.0
         version: 2.0.0
@@ -48,6 +45,9 @@ importers:
       '@types/eslint__js':
         specifier: ^8.42.3
         version: 8.42.3
+      astro:
+        specifier: 5.0.0-beta.5
+        version: 5.0.0-beta.5(@types/node@22.8.2)(rollup@4.24.2)(typescript@5.6.3)
       astro-expressive-code:
         specifier: ^0.37.1
         version: 0.37.1(astro@5.0.0-beta.5(@types/node@22.8.2)(rollup@4.24.2)(typescript@5.6.3))

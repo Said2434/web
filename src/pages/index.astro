@@ -1,6 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import authorImage from "~/assets/me.jpeg";
+import authorImage from "~/assets/adam.png";
 import { Picture } from "astro:assets";
 import { skills, socials } from "@data/constants";
 import { getCollection } from "astro:content";
@@ -22,26 +22,27 @@ const posts = (await getCollection("blog"))
   <div class="flex flex-col gap-12 md:gap-20 sm:gap-16 sm:flex-row">
     <div class="sm:w-1/4 sm:sticky sm:h-fit sm:top-10">
       <Picture
-        class="block rounded-full aspect-square overflow-hidden"
-        height={80}
-        width={80}
+        class="block rounded-full aspect-square"
         src={authorImage}
+        alt="Author smiling"
+        height={180}
+        width={180}
         loading="eager"
         densities={[1.5, 2]}
         formats={["avif", "webp"]}
-        alt="Author smiling"
       />
+  
+
       <h1
         class="mt-4 text-2xl font-bold tracking-tight dark:text-white text-zinc-900 sm:text-3xl"
       >
-        Kevin
+        Adam
       </h1>
-      <p class="dark:text-zinc-300 text-zinc-700">
-        <a
-          href="https://twitter.com/astrodotbuild"
-          class="dark:text-teal-400 text-blue-600 underline underline-offset-4"
-          >@astrodotbuild</a
-        > Maintainer
+      <p>
+      Data Scientist/Computer Vision Engineer 
+    </p>
+      Seoul, Korea
+  
       </p>
       <ul class="mt-4 sm:mt-6 grid grid-cols-1 gap-2 sm:gap-1">
         {socials.map((s) => <Social {...s} />)}
@@ -52,8 +53,7 @@ const posts = (await getCollection("blog"))
         About me
       </h2>
       <p class="mt-3 max-w-prose leading-relaxed">
-        Hello! I'm Kevin, a software engineer based in Williston, VT. I build
-        tools for developers that help them build faster and better software.
+        My research focuses on computer vision, machine learning, and remote sensing, and how these techniques can help with environmental science. I am interested in developing methods that use satellite data to study forests and other environmental topics. I also look into challenges like uncertainty in deep learning, detecting unusual patterns, and learning from data that isn’t balanced. I believe machine learning can play a key role in solving global environmental problems
       </p>
       <h2 class="mt-12 text-lg font-semibold dark:text-zinc-100 text-zinc-900">
         Favorite Technologies

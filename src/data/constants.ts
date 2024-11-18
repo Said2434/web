@@ -29,18 +29,18 @@ export const navigation = [
 export const socials = [
   {
     icon: "linkedin",
-    href: "https://www.linkedin.com/in/kevinzunigacuellar/",
-    username: "kevinzunigacuellar",
+    href: "https://www.linkedin.com/search/results/people/?firstName=%EC%9E%AC%EC%9B%90&lastName=%EC%A1%B0&origin=SEO_PSERP&sid=WPd",
+    username: "Adam",
   },
   {
     icon: "github",
-    href: "https://github.com/kevinzunigacuellar",
-    username: "kevinzunigacuellar",
+    href: "https://github.com/Said2434",
+    username: "Adam",
   },
   {
     icon: "x",
-    href: "https://twitter.com/kevinzunigacuel",
-    username: "kevinzunigacuel",
+    href: "https://x.com/Said116829",
+    username: "Adam",
   },
 ];
 

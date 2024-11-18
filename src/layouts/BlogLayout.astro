@@ -2,7 +2,7 @@
 import Layout from "@layouts/Layout.astro";
 import Pagination from "@components/Pagination.astro";
 import { Image } from "astro:assets";
-import authorImage from "../assets/me.jpeg";
+import authorImage from "../assets/adam.png";
 import type { CollectionEntry } from "astro:content";
 import { author, twitter } from "@data/constants";
 
@@ -55,7 +55,7 @@ const fullUpdatedDate = data.updatedDate?.toLocaleDateString("en", {
           src={authorImage}
           alt="The author of this blog smiling"
           loading="eager"
-          class="aspect-square w-10"
+          class="w-10 h-10"
           width={80}
           height={80}
         />
@@ -75,7 +75,7 @@ const fullUpdatedDate = data.updatedDate?.toLocaleDateString("en", {
       src={data.hero}
       alt={data.heroAlt}
       loading="eager"
-      class="rounded-lg"
+      class="rounded-lg w-full h-auto"
       width={1200}
       height={630}
     />
@@ -95,16 +95,16 @@ const fullUpdatedDate = data.updatedDate?.toLocaleDateString("en", {
   </article>
   <Pagination />
 </Layout>
+
 <style>
   article {
-    --ec-brdCol: #d7dce6;
-    --ec-frm-edTabBarBrdCol: #d7dce6;
+    font-family: "Inter", sans-serif;
+    line-height: 1.75;
   }
 
   @media (prefers-color-scheme: dark) {
     article {
-      --ec-brdCol: #353a45;
-      --ec-frm-edTabBarBrdCol: #353a45;
+      color: #e5e7eb; /* lighter text for dark mode */
     }
   }
 </style>
