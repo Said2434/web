@@ -46,14 +46,14 @@ importers:
         specifier: ^8.42.3
         version: 8.42.3
       astro:
-        specifier: 5.0.0-beta.5
+        specifier: ^5.0.0-beta.5
         version: 5.0.0-beta.5(@types/node@22.8.2)(rollup@4.24.2)(typescript@5.6.3)
       astro-expressive-code:
         specifier: ^0.37.1
         version: 0.37.1(astro@5.0.0-beta.5(@types/node@22.8.2)(rollup@4.24.2)(typescript@5.6.3))
       astro-icon:
-        specifier: ^1.1.1
-        version: 1.1.1
+        specifier: ^1.1.2
+        version: 1.1.2
       eslint:
         specifier: ^9.13.0
         version: 9.13.0(jiti@1.21.6)
@@ -1098,8 +1098,8 @@ packages:
     peerDependencies:
       astro: ^4.0.0-beta || ^5.0.0-beta || ^3.3.0
 
-  astro-icon@1.1.1:
-    resolution: {integrity: sha512-HKBesWk2Faw/0+klLX+epQVqdTfSzZz/9+5vxXUjTJaN/HnpDf608gRPgHh7ZtwBPNJMEFoU5GLegxoDcT56OQ==}
+  astro-icon@1.1.2:
+    resolution: {integrity: sha512-2qAHBtZLYuFEIMP0Ck0edyLi5fQmJjwP2Qbv41f8L4KAJ2sra/dH7q5lCOn4q0DHVtS0w3tPG8UKQRits3UPcg==}
 
   astro@5.0.0-beta.5:
     resolution: {integrity: sha512-ONR2ngPbmi0CX1aCjvjLqvkcqakqYhHXTtTQAooADOxopyXS/l0WajHGsED75K4c7LMR0blDzBC9PPcfn0Oo0w==}
@@ -3956,7 +3956,7 @@ snapshots:
       astro: 5.0.0-beta.5(@types/node@22.8.2)(rollup@4.24.2)(typescript@5.6.3)
       rehype-expressive-code: 0.37.1
 
-  astro-icon@1.1.1:
+  astro-icon@1.1.2:
     dependencies:
       '@iconify/tools': 4.0.7
       '@iconify/types': 2.0.0

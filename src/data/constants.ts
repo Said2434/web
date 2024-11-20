@@ -1,12 +1,12 @@
-export const twitter = "@kevinzunigacuel";
-export const author = "Kevin Zuniga Cuellar";
+export const twitter = "https://x.com/Said116829";
+export const author = "Adam";
 
 export const defaultMeta = {
-  title: "Kevin Zuniga Cuellar",
+  title: "Adam",
   description:
     "I am a a software engineer based in Williston, VT. I build tools for developers that help them build faster and better software",
   ogImage: {
-    src: "/static/banner.png",
+    src: "/static/adam.png",
     alt: "Kevin smiling",
   },
 };
@@ -17,7 +17,7 @@ export const navigation = [
     text: "Home",
   },
   {
-    href: "/projects/",
+    href: "/rojects/",
     text: "Projects",
   },
   {
@@ -46,30 +46,32 @@ export const socials = [
 
 export const skills = [
   {
-    label: "Astro",
-    icon: "astro",
-  },
+    label: "Pytorch",
+    icon: "pytorch",
+   },
   {
-    label: "C++",
-    icon: "cpp",
+    label: "TensorFlow",
+    icon: "tensorflow",
     size: 25,
-  },
-  {
-    label: "Go",
-    icon: "go",
-    size: 35,
   },
   {
     label: "Python",
     icon: "python",
-    size: 40,
+    size: 25,
   },
   {
-    label: "React",
-    icon: "react",
+    label: "OpenAI",
+    icon: "openai",
+    size: 25,
   },
   {
-    label: "TypeScript",
-    icon: "typescript",
+    label: "Ubuntu",
+    icon: "ubuntu",
+    size: 25,
   },
+  {
+    label: "MacOS",
+    icon: "apple-",
+    size: 25,
+  }
 ];
