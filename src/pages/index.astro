@@ -3,19 +3,19 @@ import Layout from "@layouts/Layout.astro";
 import authorImage from "~/assets/adam.png";
 import { Picture } from "astro:assets";
 import { skills, socials } from "@data/constants";
-import { getCollection } from "astro:content";
+// import { getCollection } from "astro:content";
 import Skill from "@components/Skill.astro";
 import Social from "@components/Social.astro";
-import Project from "@components/Project.astro";
-import Blog from "@components/Blog.astro";
+// import Project from "@components/Project.astro";
+// import Blog from "@components/Blog.astro";
 
-const contributions = (await getCollection("contributions"))
-  .sort((a, b) => b.data.stargazerCount - a.data.stargazerCount)
-  .slice(0, 3);
+// const contributions = (await getCollection("contributions"))
+//   .sort((a, b) => b.data.stargazerCount - a.data.stargazerCount)
+//   .slice(0, 3);
 
-const posts = (await getCollection("blog"))
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .slice(0, 4);
+// const posts = (await getCollection("blog"))
+//   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+//   .slice(0, 4);
 ---
 
 <Layout wide={true}>
