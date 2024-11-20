@@ -32,80 +32,82 @@ const posts = (await getCollection("blog"))
         formats={["avif", "webp"]}
       />
   
-
       <h1
         class="mt-4 text-2xl font-bold tracking-tight dark:text-white text-zinc-900 sm:text-3xl"
       >
         Adam
       </h1>
       <p>
-      Data Scientist/Computer Vision Engineer 
-    </p>
-      Seoul, Korea
-  
+        Data Scientist/Computer Vision Engineer
       </p>
+      <p>Seoul, Korea</p>
+
       <ul class="mt-4 sm:mt-6 grid grid-cols-1 gap-2 sm:gap-1">
         {socials.map((s) => <Social {...s} />)}
       </ul>
     </div>
+
     <section class="flex-1">
       <h2 class="text-lg font-semibold dark:text-zinc-100 text-zinc-900">
         About me
       </h2>
       <p class="mt-3 max-w-prose leading-relaxed">
-        My research focuses on computer vision, machine learning, and remote sensing, and how these techniques can help with environmental science. I am interested in developing methods that use satellite data to study forests and other environmental topics. I also look into challenges like uncertainty in deep learning, detecting unusual patterns, and learning from data that isn’t balanced. I believe machine learning can play a key role in solving global environmental problems
+        I am an AI enthusiast specializing in computer vision and deep learning, with experience in image classification, semantic segmentation, and object detection using PyTorch. My research focuses on applying machine learning to environmental science, particularly using satellite data for forest monitoring and ecosystem analysis. I have worked with advanced models like YOLO, UNet, and ResNet to develop real-world computer vision solutions. I thrive in collaborative environments, am always eager to learn, and believe AI can help solve global challenges.
       </p>
+
+      <h2 class="mt-12 text-lg font-semibold dark:text-zinc-100 text-zinc-900">
+        Work Experience
+      </h2>
+      <h2 class="mt-18 text-lg font-semibold dark:text-zinc-100 text-zinc-900">
+        2018 - 2022  Computer Science Teacher Assistant
+      </h2>
+      <p class="max-w-prose leading-relaxed">
+        • Assisted high school students in learning basics of programming languages, including Delphi, Pascal, Python, and C. <br />
+        • 3-Time Winner in National Computer Science Competitions
+      </p>
+
+      <h2 class="mt-8 text-lg font-semibold dark:text-zinc-100 text-zinc-900">
+        2023.12 - 2024.03  Remote Internship at <a href="https://www.technaxis.com/" target="_blank" rel="noopener noreferrer" class="custom-link">Technaxis</a>
+      </h2>
+      <p class="max-w-prose leading-relaxed">
+        • Contributed to the development of an object detection system for quality control and inventory management, leveraging PyTorch, YOLO, and Faster R-CNN. <br />
+        • Preprocessed diverse image datasets using OpenCV, enhancing model robustness through normalization and data augmentation techniques. <br />
+        • Optimized models for edge devices via pruning, quantization, and CUDA acceleration, ensuring real-time performance. <br />
+        • Conducted thorough evaluations using mAP and IoU metrics to validate accuracy and robustness under diverse conditions. <br />
+      </p>
+
+      <h2 class="mt-12 text-lg font-semibold dark:text-zinc-100 text-zinc-900">
+        2024.09 - Seoul Tech Impact Hackathon  <a href="https://github.com/thompsgj/dropheart-backend" target="_blank" rel="noopener noreferrer" class="custom-link">Dropheart</a>
+      </h2>
+      <p class="max-w-prose leading-relaxed">
+        • Backend Developer for Dropheart, a web application combining the fun of Geocaching with CRUD functionality for donations. <br />
+        • Built features like profile page, reporting, and collaboration with NGOs and charities to enhance user experience. <br />
+        • Developed multiple language support (i18n) to cater to foreign communities and accessibility (a11y) for better user interaction. <br />
+        • Utilized Python for backend development, enabling a seamless map interface for users to find and donate items. <br />
+        • Integrated data visualization to highlight donation supply and demand in various regions, optimizing resource distribution. <br />
+        • The project aimed to create a positive social impact, showcasing creativity, design, and technical expertise. <br />
+      </p>
+
       <h2 class="mt-12 text-lg font-semibold dark:text-zinc-100 text-zinc-900">
         Favorite Technologies
       </h2>
       <p class="mt-3 max-w-prose leading-relaxed">
-        I love exploring new libraries, programing languages and frameworks.
-        Here is a list of technologies that I have worked with at school, side
-        projects and open source.
+        I love exploring new libraries, programming languages, and frameworks. Below is a list of technologies I have worked with professionally, in side projects, and through open-source contributions.
       </p>
+
       <ul class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
         {skills.map((s) => <Skill {...s} />)}
       </ul>
-      <h2 class="mt-12 text-lg font-semibold dark:text-zinc-100 text-zinc-900">
-        Open Source
-      </h2>
-      <p class="mt-3 max-w-prose leading-relaxed">
-        I love open source and I have been contributing to different projects
-        for the some time. Here are some of the most popular projects that I
-        have contributed to.
-      </p>
-      <ul class="mt-6 grid grid-cols-1 gap-5">
-        {
-          contributions.map((contribution) => (
-            <Project
-              name={contribution.data.nameWithOwner}
-              description={contribution.data.description}
-              stargazersCount={contribution.data.stargazerCount}
-              forksCount={contribution.data.forkCount}
-              url={contribution.data.url}
-            />
-          ))
+
+     
+
+  <head>
+    <style>
+        .custom-link {
+            color: #3498db; /* Change the color */
+            text-decoration: none; /* Optional: Removes underline */
         }
-      </ul>
-      <a
-        class="inline-block mt-3 dark:hover:text-zinc-200 hover:text-zinc-800"
-        href="/projects/">View all projects &rarr;</a
-      >
-      <h2 class="mt-12 text-lg font-semibold dark:text-zinc-100 text-zinc-900">
-        Recent Posts
-      </h2>
-      <p class="mt-3 max-w-prose leading-relaxed">
-        My personal collection of code snippets, starter guides, tutorials and
-        interesting things I found online.
-      </p>
-      <ul class="mt-6 grid grid-cols-1 gap-5">
-        {posts.map((post) => <Blog minimal {...post} />)}
-        <li>
-          <a class="dark:hover:text-zinc-200 hover:text-zinc-800" href="/blog/"
-            >View all posts &rarr;</a
-          >
-        </li>
-      </ul>
-    </section>
-  </div>
+    </style>
+  </head>
+
 </Layout>

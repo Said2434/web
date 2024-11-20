@@ -20,10 +20,10 @@ export const navigation = [
     href: "/rojects/",
     text: "Projects",
   },
-  {
-    href: "/blog/",
-    text: "Blog",
-  },
+  // {
+  //   href: "/blog/",
+  //   text: "Blog",
+  // },
 ];
 
 export const socials = [
