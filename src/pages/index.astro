@@ -100,7 +100,48 @@ import Social from "@components/Social.astro";
       </ul>
 
      
-
+<h2 class="mt-12 text-lg font-semibold dark:text-zinc-100 text-zinc-900">
+        Open Source
+      </h2>
+      <p class="mt-3 max-w-prose leading-relaxed">
+        I love open source and I have been contributing to different projects
+        for the some time. Here are some of the most popular projects that I
+        have contributed to.
+      </p>
+      <ul class="mt-6 grid grid-cols-1 gap-5">
+        {
+          contributions.map((contribution) => (
+            <Project
+              name={contribution.data.nameWithOwner}
+              description={contribution.data.description}
+              stargazersCount={contribution.data.stargazerCount}
+              forksCount={contribution.data.forkCount}
+              url={contribution.data.url}
+            />
+          ))
+        }
+      </ul>
+      <a
+        class="inline-block mt-3 dark:hover:text-zinc-200 hover:text-zinc-800"
+        href="/projects/">View all projects &rarr;</a
+      >
+      <h2 class="mt-12 text-lg font-semibold dark:text-zinc-100 text-zinc-900">
+        Recent Posts
+      </h2>
+      <p class="mt-3 max-w-prose leading-relaxed">
+        My personal collection of code snippets, starter guides, tutorials and
+        interesting things I found online.
+      </p>
+      <ul class="mt-6 grid grid-cols-1 gap-5">
+        {posts.map((post) => <Blog minimal {...post} />)}
+        <li>
+          <a class="dark:hover:text-zinc-200 hover:text-zinc-800" href="/blog/"
+            >View all posts &rarr;</a
+          >
+        </li>
+      </ul>
+    </section>
+  </div>
   <head>
     <style>
         .custom-link {
