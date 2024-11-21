@@ -22,7 +22,7 @@ const blog = defineCollection({
 
 const projects = defineCollection({
   loader: gitHubReposLoader({
-    username: "kevinzunigacuellar",
+    username: "Said2434",
   }),
 });
 
