@@ -9,13 +9,15 @@ const personalProjects = (await getCollection("projects"))
   .filter((project) => project.data.stargazers_count > 1)
   .slice(0, 12);
 
+  console.log(personalProjects)
+
 const contributions = (await getCollection("contributions"))
   .toSorted((a, b) => b.data.stargazerCount - a.data.stargazerCount)
   .filter((project) => project.data.stargazerCount > 1)
   .slice(0, 12);
 ---
 
-<Layout title="Projects | Kevin Zuniga Cuellar">
+<Layout title="Projects |Saidov Adam">
   <Header title="Projects" />
   <p class="max-w-prose leading-relaxed">
     Here are some of the projects I've worked on. Some of them are open source

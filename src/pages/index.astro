@@ -3,43 +3,30 @@ import Layout from "@layouts/Layout.astro";
 import authorImage from "~/assets/adam.png";
 import { Picture } from "astro:assets";
 import { skills, socials } from "@data/constants";
-// import { getCollection } from "astro:content";
 import Skill from "@components/Skill.astro";
 import Social from "@components/Social.astro";
-// import Project from "@components/Project.astro";
-// import Blog from "@components/Blog.astro";
-
-// const contributions = (await getCollection("contributions"))
-//   .sort((a, b) => b.data.stargazerCount - a.data.stargazerCount)
-//   .slice(0, 3);
-
-// const posts = (await getCollection("blog"))
-//   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-//   .slice(0, 4);
 ---
 
 <Layout wide={true}>
   <div class="flex flex-col gap-12 md:gap-20 sm:gap-16 sm:flex-row">
+    <!-- Sidebar -->
     <div class="sm:w-1/4 sm:sticky sm:h-fit sm:top-10">
       <Picture
         class="block rounded-full aspect-square"
         src={authorImage}
-        alt="Author smiling"
+        alt="Saidov Saidazam smiling"
         height={180}
         width={180}
         loading="eager"
         densities={[1.5, 2]}
-        formats={["avif", "webp"]}
+        formats={["avif", "webp", "png"]}
       />
   
-      <h1
-        class="mt-4 text-2xl font-bold tracking-tight dark:text-white text-zinc-900 sm:text-3xl"
-      >
-        Adam
+      <h1 class="mt-4 text-2xl font-bold tracking-tight dark:text-white text-zinc-900 sm:text-3xl">
+        Saidov Saidazam 
+        (Adam)
       </h1>
-      <p>
-        Data Scientist/Computer Vision Engineer
-      </p>
+      <p>Data Scientist / Computer Vision Engineer</p>
       <p>Seoul, Korea</p>
 
       <ul class="mt-4 sm:mt-6 grid grid-cols-1 gap-2 sm:gap-1">
@@ -47,67 +34,70 @@ import Social from "@components/Social.astro";
       </ul>
     </div>
 
+    <!-- Main Content -->
     <section class="flex-1">
-      <h2 class="text-lg font-semibold dark:text-zinc-100 text-zinc-900">
-        About me
-      </h2>
-      <p class="mt-3 max-w-prose leading-relaxed">
+      <!-- About Me -->
+      <h2 class="text-lg font-semibold dark:text-zinc-100 text-zinc-900">About me</h2>
+      <p class="mt-3 max-w-prose leadng-relaxed">
         I am an AI enthusiast specializing in computer vision and deep learning, with experience in image classification, semantic segmentation, and object detection using PyTorch. My research focuses on applying machine learning to environmental science, particularly using satellite data for forest monitoring and ecosystem analysis. I have worked with advanced models like YOLO, UNet, and ResNet to develop real-world computer vision solutions. I thrive in collaborative environments, am always eager to learn, and believe AI can help solve global challenges.
       </p>
 
-      <h2 class="mt-12 text-lg font-semibold dark:text-zinc-100 text-zinc-900">
-        Work Experience
-      </h2>
-      <h2 class="mt-18 text-lg font-semibold dark:text-zinc-100 text-zinc-900">
-        2018 - 2022  Computer Science Teacher Assistant
-      </h2>
-      <p class="max-w-prose leading-relaxed">
-        • Assisted high school students in learning basics of programming languages, including Delphi, Pascal, Python, and C. <br />
-        • 3-Time Winner in National Computer Science Competitions
-      </p>
+      <!-- Work Experience -->
+      <h2 class="mt-12 text-lg font-semibold dark:text-zinc-100 text-zinc-900">Work Experience</h2>
+      <div>
+        <h3 class="mt-6 text-md font-semibold dark:text-zinc-100 text-zinc-900">
+          2018 - 2022: Computer Science Teacher Assistant
+        </h3>
+        <p class="max-w-prose leading-relaxed">
+          • Assisted high school students in learning programming languages, including Delphi, Pascal, Python, and C. <br />
+          • 3-Time Winner in National Computer Science Competitions.
+        </p>
+      </div>
 
-      <h2 class="mt-8 text-lg font-semibold dark:text-zinc-100 text-zinc-900">
-        2023.12 - 2024.03  Remote Internship at <a href="https://www.technaxis.com/" target="_blank" rel="noopener noreferrer" class="custom-link">Technaxis</a>
-      </h2>
-      <p class="max-w-prose leading-relaxed">
-        • Contributed to the development of an object detection system for quality control and inventory management, leveraging PyTorch, YOLO, and Faster R-CNN. <br />
-        • Preprocessed diverse image datasets using OpenCV, enhancing model robustness through normalization and data augmentation techniques. <br />
-        • Optimized models for edge devices via pruning, quantization, and CUDA acceleration, ensuring real-time performance. <br />
-        • Conducted thorough evaluations using mAP and IoU metrics to validate accuracy and robustness under diverse conditions. <br />
-      </p>
+      <div>
+        <h3 class="mt-8 text-md font-semibold dark:text-zinc-100 text-zinc-900">
+          2023.12 - 2024.03: Remote Internship at <a href="https://www.technaxis.com/" target="_blank" rel="noopener noreferrer" class="custom-link">Technaxis</a>
+        </h3>
+        <p class="max-w-prose leading-relaxed">
+          • Contributed to developing an object detection system for quality control and inventory management, leveraging PyTorch, YOLO, and Faster R-CNN. <br />
+          • Preprocessed diverse image datasets using OpenCV, enhancing model robustness through normalization and data augmentation techniques. <br />
+          • Optimized models for edge devices via pruning, quantization, and CUDA acceleration, ensuring real-time performance. <br />
+          • Conducted thorough evaluations using mAP and IoU metrics to validate accuracy and robustness under diverse conditions.
+        </p>
+      </div>
 
-      <h2 class="mt-12 text-lg font-semibold dark:text-zinc-100 text-zinc-900">
-        2024.09 - Seoul Tech Impact Hackathon  <a href="https://github.com/thompsgj/dropheart-backend" target="_blank" rel="noopener noreferrer" class="custom-link">Dropheart</a>
-      </h2>
-      <p class="max-w-prose leading-relaxed">
-        • Backend Developer for Dropheart, a web application combining the fun of Geocaching with CRUD functionality for donations. <br />
-        • Built features like profile page, reporting, and collaboration with NGOs and charities to enhance user experience. <br />
-        • Developed multiple language support (i18n) to cater to foreign communities and accessibility (a11y) for better user interaction. <br />
-        • Utilized Python for backend development, enabling a seamless map interface for users to find and donate items. <br />
-        • Integrated data visualization to highlight donation supply and demand in various regions, optimizing resource distribution. <br />
-        • The project aimed to create a positive social impact, showcasing creativity, design, and technical expertise. <br />
-      </p>
+      <div>
+        <h3 class="mt-8 text-md font-semibold dark:text-zinc-100 text-zinc-900">
+          2024.09: Seoul Tech Impact Hackathon - <a href="https://github.com/thompsgj/dropheart-backend" target="_blank" rel="noopener noreferrer" class="custom-link">Dropheart</a> - <a href="https://d1zpw5mq5bnzyn.cloudfront.net/images/9310e365515c451ea24d3fa2bbc53427.jpeg" target="_blank" rel="noopener noreferrer" class="custom-link">Certificate</a>
+        </h3>
+        <p class="max-w-prose leading-relaxed">
+          • Backend Developer for Dropheart, a web app combining geocaching with CRUD functionality for donations. <br />
+          • Built features like profile page, reporting, and collaboration with NGOs and charities to enhance user experience. <br />
+          • Integrated data visualization to optimize donation supply and demand distribution.
+        </p>
+      </div>
 
-      <h2 class="mt-12 text-lg font-semibold dark:text-zinc-100 text-zinc-900">
-        Favorite Technologies
-      </h2>
+      <!-- Favorite Technologies -->
+      <h2 class="mt-12 text-lg font-semibold dark:text-zinc-100 text-zinc-900">Favorite Technologies</h2>
       <p class="mt-3 max-w-prose leading-relaxed">
         I love exploring new libraries, programming languages, and frameworks. Below is a list of technologies I have worked with professionally, in side projects, and through open-source contributions.
       </p>
-
       <ul class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
         {skills.map((s) => <Skill {...s} />)}
       </ul>
+    </section>
+  </div>
 
-     
-
+  <!-- Custom Styles -->
   <head>
     <style>
-        .custom-link {
-            color: #3498db; /* Change the color */
-            text-decoration: none; /* Optional: Removes underline */
-        }
+      .custom-link {
+        color: #3498db; /* Change the color */
+        text-decoration: none; /* Removes underline */
+      }
+      .custom-link:hover {
+        text-decoration: underline;
+      }
     </style>
   </head>
-
 </Layout>

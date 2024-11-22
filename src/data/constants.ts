@@ -17,7 +17,7 @@ export const navigation = [
     text: "Home",
   },
   {
-    href: "/rojects/",
+    href: "/projects/",
     text: "Projects",
   },
   // {

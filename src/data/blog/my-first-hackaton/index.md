@@ -12,7 +12,7 @@ At the time of this writing, I'm still polishing some details and maybe adding a
 
 Watch a quick demo of the project in [Loom](https://www.loom.com/share/cb1b632896f34782abf15c39bf21421c?sid=73033ec4-dec2-4b4c-9216-14f58d8e33aa)
 
-Code is available on [GitHub](https://github.com/kevinzunigacuellar/shield)
+Code is available on [GitHub](https://github.com/Said2434)
 
 ## The Project
 
