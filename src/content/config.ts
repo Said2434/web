@@ -2,8 +2,19 @@ import { defineCollection, z } from "astro:content";
 import { gitHubReposLoader } from "../loaders/repos";
 import { gitHubContributionsLoader } from "../loaders/contributions";
 import { glob } from "astro/loaders";
-import { GH_TOKEN } from "astro:env/server";
 
+// Access the GitHub token from the environment
+const GH_TOKEN = import.meta.env.GH_TOKEN;
+
+// Safely assert GH_TOKEN as a string
+const token = GH_TOKEN as unknown as string;
+
+// Ensure the token is valid
+if (!token) {
+  throw new Error("GitHub token (GH_TOKEN) is missing or invalid!");
+}
+
+// Define the blog collection
 const blog = defineCollection({
   loader: glob({
     pattern: "**/*.md",
@@ -20,15 +31,17 @@ const blog = defineCollection({
     }),
 });
 
+// Define the projects collection
 const projects = defineCollection({
   loader: gitHubReposLoader({
-    username: "Said2434",
+    username: "said2434",
   }),
 });
 
+// Define the contributions collection
 const contributions = defineCollection({
   loader: gitHubContributionsLoader({
-    token: GH_TOKEN,
+    token: token, // Use the safely asserted token
   }),
 });
 
