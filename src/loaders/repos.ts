@@ -3,7 +3,7 @@ import type { Loader } from "astro/loaders";
 import Slugger from "github-slugger";
 import { z } from "astro/zod";
 import type { AstroIntegrationLogger } from "astro";
-
+console.log(import.meta.env.GH_TOKEN);
 const MAX_RESULTS_PER_PAGE = 100;
 
 const GitHubReposLoaderConfigSchema = z.object({
